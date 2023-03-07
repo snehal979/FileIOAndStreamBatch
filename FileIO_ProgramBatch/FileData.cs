@@ -46,5 +46,13 @@ namespace FileIO_ProgramBatch
             string copyPath = @"C:\Users\hp\Desktop\newBatch2\FileIO_ProgramBatch\FileIO_ProgramBatch\CopyTxtFile.txt";
             File.Copy(filepath, copyPath);
         }
+        /// <summary>
+        /// Delect file
+        /// </summary>
+        public static void Delect()
+        {
+            string copyPath = @"C:\Users\hp\Desktop\newBatch2\FileIO_ProgramBatch\FileIO_ProgramBatch\CopyTxtFile.txt";
+            File.Delete(copyPath);
+        }
     }
 }
