@@ -70,5 +70,14 @@ namespace FileIO_ProgramBatch
             }
             Console.ReadLine();
         }
+        public void WriteUsingStreamWriter(string filepath)
+        {
+            using (StreamWriter sr = File.AppendText(filepath))
+            {
+                sr.WriteLine("How Are you?");
+                sr.Close();
+                ReadFromStreamReader(filepath);
+            }
+        }
     }
 }
