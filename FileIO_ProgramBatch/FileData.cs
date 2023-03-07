@@ -18,5 +18,15 @@ namespace FileIO_ProgramBatch
                 Console.WriteLine("File Exists");
             }
         }
+        /// <summary>
+        /// ReadAllLine
+        /// </summary>
+        /// <param name="filepath"></param>
+        public static void ReadAllLine(string filepath)
+        {
+            string[] lines = File.ReadAllLines(filepath);
+            Console.WriteLine(lines[0]);
+            Console.WriteLine(lines[1]);
+        }
     }
 }
