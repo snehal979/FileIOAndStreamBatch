@@ -28,5 +28,14 @@ namespace FileIO_ProgramBatch
             Console.WriteLine(lines[0]);
             Console.WriteLine(lines[1]);
         }
+        /// <summary>
+        /// read all txt
+        /// </summary>
+        /// <param name="filepath"></param>
+        public static void ReadAllTxt(string filepath)
+        {
+            string lines = File.ReadAllText(filepath);
+            Console.WriteLine(lines);
+        }
     }
 }
