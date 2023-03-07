@@ -5,7 +5,7 @@
         public static void Main(string[] args)
         {
             string filepath = @"C:\Users\hp\Desktop\newBatch2\FileIO_ProgramBatch\FileIO_ProgramBatch\TxtFile.txt";
-            Console.WriteLine("1.exitfile 2.readallline 3.ReadAll Txt");
+            Console.WriteLine("1.exitfile 2.readallline 3.ReadAll Txt 4.Copy file");
             int num = Convert.ToInt16(Console.ReadLine());
             switch (num)
             {
@@ -17,6 +17,9 @@
                     break;
                 case 3:
                     FileData.ReadAllTxt(filepath);
+                    break;
+                case 4:
+                    FileData.Copy(filepath);
                     break;
                 default:
                     Console.WriteLine("Invalid");

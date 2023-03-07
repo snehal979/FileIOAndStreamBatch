@@ -37,5 +37,14 @@ namespace FileIO_ProgramBatch
             string lines = File.ReadAllText(filepath);
             Console.WriteLine(lines);
         }
+        /// <summary>
+        /// copy file
+        /// </summary>
+        /// <param name="filepath"></param>
+        public static void Copy(string filepath)
+        {
+            string copyPath = @"C:\Users\hp\Desktop\newBatch2\FileIO_ProgramBatch\FileIO_ProgramBatch\CopyTxtFile.txt";
+            File.Copy(filepath, copyPath);
+        }
     }
 }
