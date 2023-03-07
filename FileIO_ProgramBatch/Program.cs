@@ -5,7 +5,8 @@
         public static void Main(string[] args)
         {
             string filepath = @"C:\Users\hp\Desktop\newBatch2\FileIO_ProgramBatch\FileIO_ProgramBatch\TxtFile.txt";
-            Console.WriteLine("1.exitfile 2.readallline 3.ReadAll Txt 4.Copy file 5.Delect file");
+            FileData fileData = new FileData();
+            Console.WriteLine("1.exitfile 2.readallline 3.ReadAll Txt 4.Copy file 5.Delect file 6.Read file streamReader");
             int num = Convert.ToInt16(Console.ReadLine());
             switch (num)
             {
@@ -23,6 +24,9 @@
                     break;
                 case 5:
                     FileData.Delect();
+                    break;
+                case 6:
+                    fileData.ReadFromStreamReader(filepath);
                     break;
                 default:
                     Console.WriteLine("Invalid");

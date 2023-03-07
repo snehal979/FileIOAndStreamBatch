@@ -54,5 +54,21 @@ namespace FileIO_ProgramBatch
             string copyPath = @"C:\Users\hp\Desktop\newBatch2\FileIO_ProgramBatch\FileIO_ProgramBatch\CopyTxtFile.txt";
             File.Delete(copyPath);
         }
+        /// <summary>
+        /// Stream Reader
+        /// </summary>
+        /// <param name="filepath"></param>
+        public void ReadFromStreamReader(string filepath)
+        {
+            using (StreamReader sr = File.OpenText(filepath))
+            {
+                string s = "";
+                while ((s = sr.ReadLine()) != null)
+                {
+                    Console.WriteLine(s);
+                }
+            }
+            Console.ReadLine();
+        }
     }
 }
