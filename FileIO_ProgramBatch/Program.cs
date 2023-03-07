@@ -7,12 +7,13 @@
             string binnaryFilePath = @"C:\Users\hp\Desktop\newBatch2\FileIO_ProgramBatch\FileIO_ProgramBatch\BinnaryTxtFile.txt";
             string filepath = @"C:\Users\hp\Desktop\newBatch2\FileIO_ProgramBatch\FileIO_ProgramBatch\TxtFile.txt";
             FileData fileData = new FileData();
-            BinarySerilization binarySerilization = new BinarySerilization(); 
+            BinarySerilization binarySerilization = new BinarySerilization();
+            JsonSerializationDeserialization json = new JsonSerializationDeserialization();
             bool flag = true;
             while (flag)
             {
                 Console.WriteLine("1.exitfile 2.readallline 3.ReadAll Txt 4.Copy file 5.Delect file 6.Read file streamReader 7.Write File" +
-                    "8.Serilization 9.Deserilization");
+                    " \n 8.Serialization and 9 .Deserization \n 10 Json data Serialization 11. json data deserialization"); 
                 int num = Convert.ToInt16(Console.ReadLine());
                 switch (num)
                 {
@@ -42,6 +43,12 @@
                         break; 
                     case 9:
                         binarySerilization.DeSerialization(binnaryFilePath);
+                        break;
+                    case 10:
+                        json.JsonSerialize();
+                        break;
+                    case 11:
+                        json.JsonDeserialization();
                         break;
                     default:
                         Console.WriteLine("Invalid");
