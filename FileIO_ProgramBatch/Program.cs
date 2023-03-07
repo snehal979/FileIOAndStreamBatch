@@ -4,12 +4,15 @@
     {
         public static void Main(string[] args)
         {
+            string binnaryFilePath = @"C:\Users\hp\Desktop\newBatch2\FileIO_ProgramBatch\FileIO_ProgramBatch\BinnaryTxtFile.txt";
             string filepath = @"C:\Users\hp\Desktop\newBatch2\FileIO_ProgramBatch\FileIO_ProgramBatch\TxtFile.txt";
             FileData fileData = new FileData();
+            BinarySerilization binarySerilization = new BinarySerilization(); 
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("1.exitfile 2.readallline 3.ReadAll Txt 4.Copy file 5.Delect file 6.Read file streamReader 7.Write File");
+                Console.WriteLine("1.exitfile 2.readallline 3.ReadAll Txt 4.Copy file 5.Delect file 6.Read file streamReader 7.Write File" +
+                    "8.Serilization 9.Deserilization");
                 int num = Convert.ToInt16(Console.ReadLine());
                 switch (num)
                 {
@@ -33,6 +36,12 @@
                         break;
                     case 7:
                         fileData.WriteUsingStreamWriter(filepath);
+                        break;
+                    case 8:
+                        binarySerilization.Serialization(binnaryFilePath);
+                        break; 
+                    case 9:
+                        binarySerilization.DeSerialization(binnaryFilePath);
                         break;
                     default:
                         Console.WriteLine("Invalid");

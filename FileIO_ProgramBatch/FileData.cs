@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -68,8 +69,11 @@ namespace FileIO_ProgramBatch
                     Console.WriteLine(s);
                 }
             }
-            Console.ReadLine();
         }
+        /// <summary>
+        /// streamWrite
+        /// </summary>
+        /// <param name="filepath"></param>
         public void WriteUsingStreamWriter(string filepath)
         {
             using (StreamWriter sr = File.AppendText(filepath))
